@@ -5,7 +5,7 @@
         },
         "trigger": {
             "url-filter": ".*",
-            "resource-type": ["image", "style-sheet"]
+            "resource-type": ["image"]
         }
     }
 ]
