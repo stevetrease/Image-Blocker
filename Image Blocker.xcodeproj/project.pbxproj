@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		AA0781E821AB256D0085C751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0781E621AB256D0085C751 /* LaunchScreen.storyboard */; };
 		AA0781F621AB25AA0085C751 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0781F521AB25AA0085C751 /* blockerList.json */; };
 		AA0781F821AB25AA0085C751 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0781F721AB25AA0085C751 /* ContentBlockerRequestHandler.swift */; };
-		AA0781FC21AB25AA0085C751 /* Image Blocker blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA0781F321AB25AA0085C751 /* Image Blocker blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA0781FC21AB25AA0085C751 /* Image Blocker blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA0781F321AB25AA0085C751 /* Image Blocker blocker.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,8 @@
 		AA0781F521AB25AA0085C751 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		AA0781F721AB25AA0085C751 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		AA0781F921AB25AA0085C751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAD726123E17C9C0020635E /* Image Blocker blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Image Blocker blocker.entitlements"; sourceTree = "<group>"; };
+		AAAD726223E17CB50020635E /* Image Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Image Blocker.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		AA0781DC21AB256C0085C751 /* Image Blocker */ = {
 			isa = PBXGroup;
 			children = (
+				AAAD726223E17CB50020635E /* Image Blocker.entitlements */,
 				AA0781DD21AB256C0085C751 /* AppDelegate.swift */,
 				AA0781DF21AB256C0085C751 /* ViewController.swift */,
 				AA0781E121AB256C0085C751 /* Main.storyboard */,
@@ -107,6 +110,7 @@
 		AA0781F421AB25AA0085C751 /* Image Blocker blocker */ = {
 			isa = PBXGroup;
 			children = (
+				AAAD726123E17C9C0020635E /* Image Blocker blocker.entitlements */,
 				AA0781F521AB25AA0085C751 /* blockerList.json */,
 				AA0781F721AB25AA0085C751 /* ContentBlockerRequestHandler.swift */,
 				AA0781F921AB25AA0085C751 /* Info.plist */,
@@ -234,6 +238,7 @@
 /* Begin PBXTargetDependency section */
 		AA0781FB21AB25AA0085C751 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = AA0781F221AB25AA0085C751 /* Image Blocker blocker */;
 			targetProxy = AA0781FA21AB25AA0085C751 /* PBXContainerItemProxy */;
 		};
@@ -380,15 +385,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Image Blocker/Image Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 22648A4K3P;
 				INFOPLIST_FILE = "Image Blocker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.trease.Image-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,15 +408,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Image Blocker/Image Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 22648A4K3P;
 				INFOPLIST_FILE = "Image Blocker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.trease.Image-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Image Blocker blocker/Image Blocker blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22648A4K3P;
 				INFOPLIST_FILE = "Image Blocker blocker/Info.plist";
@@ -425,9 +439,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eu.trease.Image-Blocker.Image-Blocker-blocker";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.trease.Image-Blocker.Image-Blocker-blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -437,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Image Blocker blocker/Image Blocker blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22648A4K3P;
 				INFOPLIST_FILE = "Image Blocker blocker/Info.plist";
@@ -445,9 +461,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "eu.trease.Image-Blocker.Image-Blocker-blocker";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.trease.Image-Blocker.Image-Blocker-blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
